@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <style type="text/css">
+        #s_form {text-align:center; position:relative; top:100px;}
+        #bookname {width:500px; height:28px; font:16px/18px arial;}
+        #search {width:100px; height:36px; font-size:15px; background-color:#3385ff; color:#fff}
+        #content {position:relative; top:100px; font:20px/22px arial; background-color:#eeeeee; width:70%; margin:0 auto;}
+
+    </style>
+</head>
+<body>
+<div id="s_form" style="display: block;">
+    <form action="" method="post">
+        <input type="text" id="bookname" name="bookname">
+        <input type="submit" id="search" value="搜索">
+    </form>
+</div>
+<div id="content" style="display: block;">
+    {% if name %}
+    <p>{{name}}</p>
+    {% endif %}
+</div>
+</body>
+</html>
