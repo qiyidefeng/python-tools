@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 # Created by .ignore support plugin (hsz.mobi)
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+=======
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+>>>>>>> repo1
 
 # C extensions
 *.so
 
+<<<<<<< HEAD
 # git
 .idea
 
@@ -20,6 +27,16 @@ dist/
 downloads/
 eggs/
 .eggs/
+=======
+# Distribution / packaging
+.Python
+env/
+venv/
+build/
+develop-eggs/
+dist/
+eggs/
+>>>>>>> repo1
 lib/
 lib64/
 parts/
@@ -29,12 +46,15 @@ var/
 .installed.cfg
 *.egg
 
+<<<<<<< HEAD
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
+=======
+>>>>>>> repo1
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
@@ -43,12 +63,18 @@ pip-delete-this-directory.txt
 htmlcov/
 .tox/
 .coverage
+<<<<<<< HEAD
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
 *,cover
 .hypothesis/
+=======
+.cache
+nosetests.xml
+coverage.xml
+>>>>>>> repo1
 
 # Translations
 *.mo
@@ -56,6 +82,7 @@ coverage.xml
 
 # Django stuff:
 *.log
+<<<<<<< HEAD
 local_settings.py
 
 # Flask stuff:
@@ -64,10 +91,13 @@ instance/
 
 # Scrapy stuff:
 .scrapy
+=======
+>>>>>>> repo1
 
 # Sphinx documentation
 docs/_build/
 
+<<<<<<< HEAD
 # PyBuilder
 target/
 
@@ -96,3 +126,7 @@ ENV/
 
 # other
 *.ttf
+=======
+# git
+.idea
+>>>>>>> repo1

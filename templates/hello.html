@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <style type="text/css">
+        #s_form {text-align:center; position:relative; top:20px;}
+        #bookname {width:500px; height:28px; font:16px/18px arial;}
+        #search {width:100px; height:36px; font-size:15px; background-color:#3385ff; color:#fff}
+        #content {position:relative; top:100px; font:20px/22px arial; background-color:#eeeeee; width:70%; margin:0 auto;}
+        h2 {text-align:center}
+        #lg {text-align:center}
+        #bar {margin:0 auto; width:100%; text-align:center; position:absolute; bottom:47px; color:#999}
+
+    </style>
+</head>
+<body>
+<div id="lg">
+    <img src="../static/pics/logo.png" width="270" height="129">
+</div>
+<div id="s_form" style="display: block;">
+    <form action="" method="post">
+        <input type="text" id="bookname" name="bookname" values={{input}}>
+        <input type="submit" id="search" value="搜索">
+    </form>
+</div>
+<div id="content" style="display: block;">
+    {% if chapter %}
+        <h2>{{chapter}}</h2>
+    {% endif %}
+    {% if text %}
+        {% for pr in text %}
+            <p>{{pr}}</p>
+        {% endfor %}
+    {% endif %}
+</div>
+<div id="bar">
+    <p>@2016 Provided by qiyidefeng.</p>
+</div>
+</body>
+</html>
