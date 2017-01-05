@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度两下</title>
+    <link rel="shortcut icon" href="../static/pics/favicon.ico" type="image/x-icon">
+    <style type="text/css">
+        * {margin:0; padding:0}
+        #header {
+            margin-top: 100px;
+            text-align: center;}
+        #bookname {
+            width:500px;
+            height:28px;
+            font:16px/18px arial;}
+        #search {
+            width:100px;
+            height:36px;
+            font-size:15px;
+            background-color:#3385ff;
+            color:#fff}
+        #footer {
+            position: absolute;
+            bottom: 30px;
+            text-align: center;
+            width:100%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="header">
+    <div id="logo">
+        <img src="../static/pics/logo.png" width="270" height="129">
+    </div>
+    <div id="input">
+        <form action="" method="post">
+            <input type="text" id="bookname" name="bookname" values={{input}}>
+            <input type="submit" id="search" value="搜索">
+        </form>
+    </div>
+</div>
+<div id="footer">@2016 Provided by qiyidefeng.</div>
+</body>
+</html>

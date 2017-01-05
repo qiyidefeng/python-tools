@@ -316,7 +316,7 @@ def hello_world():
         search_string = request.form['bookname']
         print search_string
         if search_string == '':
-            return render_template('hello.html')
+            return render_template('index.html')
         words = search_string.split(u' ')
         bookname = words[0]
         chapter_num = '0'
@@ -326,14 +326,14 @@ def hello_world():
         qidian_url, latest_chapter = searchQidian(bookname)
         print 'qidian结果:', qidian_url, latest_chapter
         if qidian_url is None:
-            return render_template('hello.html')
+            return render_template('index.html')
         #print urllib.quote(bookname.encode('utf-8'))
 
         if chapter_num == '0':
             chapter_num = latest_chapter
         elif int(chapter_num)>int(latest_chapter):
             return render_template(
-                'hello.html',
+                'search.html',
                 input=search_string,
                 text=u'目前还没有该章节呢！')
 
@@ -342,17 +342,17 @@ def hello_world():
             content = searchDhzw(bookname, chapter_num)
         if content is None:
             return render_template(
-                'hello.html',
+                'search.html',
                 input=search_string,
                 text=u'未找到')
         else:
             return render_template(
-                'hello.html',
+                'search.html',
                 input=search_string,
                 text=content)
 
     else:
-        return render_template('hello.html')
+        return render_template('index.html')
 
 
 if __name__ == '__main__':
