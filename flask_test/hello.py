@@ -335,7 +335,7 @@ def hello_world():
             return render_template(
                 'search.html',
                 input=search_string,
-                text=u'目前还没有该章节呢！')
+                text={u'目前还没有该章节呢！'})
 
         content = search33yq(bookname, chapter_num)
         if content is None:
@@ -344,7 +344,7 @@ def hello_world():
             return render_template(
                 'search.html',
                 input=search_string,
-                text=u'未找到')
+                text={u'未找到'})
         else:
             return render_template(
                 'search.html',
