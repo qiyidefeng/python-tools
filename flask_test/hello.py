@@ -195,7 +195,7 @@ def searchQidian(bookname):
         return None, None
 
     except Exception, e:
-        print e.message
+        #print e.message
         return None, None
 
 
@@ -246,7 +246,7 @@ def search33yq(bookname, chapter_num):
             return None
         return content
     except Exception, e:
-        print '搜索33yq.com出现错误', e.message
+        #print '搜索33yq.com出现错误', e.message
         return None
 
 
@@ -295,7 +295,7 @@ def searchDhzw(bookname, chapter_num):
             return None
         return content
     except Exception, e:
-        print '搜索dhzw.com出现错误', e.message
+        #print '搜索dhzw.com出现错误', e.message
         return None
 
 
@@ -314,7 +314,7 @@ def search23zw(bookname, chapter_num):
 def hello_world():
     if request.method == 'POST':
         search_string = request.form['bookname']
-        print search_string
+        #print search_string
         if search_string == '':
             return render_template('index.html')
         words = search_string.split(u' ')
@@ -324,7 +324,7 @@ def hello_world():
             chapter_num = words[1]
 
         qidian_url, latest_chapter = searchQidian(bookname)
-        print 'qidian结果:', qidian_url, latest_chapter
+        #print 'qidian结果:', qidian_url, latest_chapter
         if qidian_url is None:
             return render_template('index.html')
         #print urllib.quote(bookname.encode('utf-8'))
@@ -356,4 +356,4 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
